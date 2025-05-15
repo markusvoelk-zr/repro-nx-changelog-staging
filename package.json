@@ -4,17 +4,20 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@nx/js": "20.8.1",
     "@swc-node/register": "~1.9.1",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@types/node": "18.16.9",
     "nx": "20.8.1",
     "tslib": "^2.3.0",
+    "tsx": "^4.19.4",
     "typescript": "~5.7.2"
   },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "lib-a"
+  ],
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

@@ -11,6 +11,20 @@
     ],
     "sharedGlobals": []
   },
+  "release": {
+    "releaseTagPattern": "{projectName}-{version}",
+    "projects": ["packages/**/*"],
+    "projectsRelationship": "independent",
+    "git": {
+      "tag": false,
+      "commit": false,
+      "stageChanges": true
+    },
+    "changelog": {
+      "automaticFromRef": true,
+      "projectChangelogs": true
+    }
+  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -23,6 +37,20 @@
           "configName": "tsconfig.lib.json",
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
+        }
+      },
+      "exclude": [
+        "lib-a/*"
+      ]
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": [
+        "lib-a/*"
+      ],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
         }
       }
     }
